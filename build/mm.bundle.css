@@ -8301,10 +8301,10 @@ a.wiki_edit_section {
   color: #fff; }
 
 .init, .connect, .credentials, .reconnect {
-  background-color: #6e999d;
+  background-color: #df57c5;
   background-image: url("../img/logo.png"), url("../img/bg_2.png");
   background-repeat: no-repeat;
-  background-position: top 20px center, bottom right;
+  background-position: top 20px center, bottom left;
   background-size: 260px auto, 50%;
   padding-top: 65px; }
   .init .list-inset, .connect .list-inset, .credentials .list-inset, .reconnect .list-inset {

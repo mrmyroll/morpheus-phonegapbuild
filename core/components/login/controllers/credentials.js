@@ -74,6 +74,10 @@ angular.module('mm.core.login')
         siteChecked = true;
     }
 
+    $scope.forgot_password = function() {
+        $mmUtil.openInBrowser("http://10.66.110.96/login/forgot_password.php");
+    }
+
     $scope.login = function() {
 
         $mmApp.closeKeyboard();
