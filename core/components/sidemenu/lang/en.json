@@ -4,5 +4,8 @@
     "changesite": "Change site",
     "mycourses": "My courses",
     "togglemenu": "Toggle menu",
-    "website": "Website"
+    "website": "Website",
+    "confirmdeletesite": "Are you sure you want to delete the site {{sitename}}?",
+    "keluar": "Log Out",
+    "errordeletesite": "An error occurred while deleting this site. Please try again."
 }

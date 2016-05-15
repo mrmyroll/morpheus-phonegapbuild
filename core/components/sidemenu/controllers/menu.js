@@ -27,7 +27,35 @@ angular.module('mm.core.sidemenu')
     $scope.handlers = $mmSideMenuDelegate.getNavHandlers();
     $scope.areNavHandlersLoaded = $mmSideMenuDelegate.areNavHandlersLoaded;
     $scope.siteinfo = $mmSite.getInfo();
+    
+    $scope.keluar = function() {
+        // Prevent login() from being triggered. No idea why I cannot replicate this
+        // problem on http://codepen.io/ionic/pen/JsHjf.
+        /*e.stopPropagation();
 
+        var site = $scope.sites[index],
+            sitename = site.sitename;
+
+        $mmText.formatText(sitename).then(function(sitename) {
+            $mmUtil.showConfirm($translate('mm.sidemenu.confirmdeletesite', {sitename: sitename})).then(function() {
+                $mmSitesManager.deleteSite(site.id).then(function() {
+                    $scope.sites.splice(index, 1);
+                    $mmSitesManager.hasNoSites().then(function() {
+                        // No sites left, go to add a new site state.
+                        //$ionicHistory.nextViewOptions({disableBack: true});
+                       //$mmLoginHelper.goToAddSite();
+                       $state.go('mm_login.sites');
+                    });
+                }, function() {
+                    $log.error('Delete site failed');
+                    $mmUtil.showErrorModal('mm.sidemenu.errordeletesite', true);
+                });
+            });
+        });*/
+        $log.error('Delete site failed');
+         $mmUtil.showErrorModal('mm.sidemenu.errordeletesite', true);
+    };
+    
     $scope.logout = function() {
         $mmSitesManager.logout().finally(function() {
             $state.go('mm_login.sites');
