@@ -75,7 +75,7 @@ angular.module('mm.core.login')
     }
 
     $scope.forgot_password = function() {
-        $mmUtil.openInBrowser("http://10.66.110.96/login/forgot_password.php");
+        $mmUtil.openInBrowser("http://192.168.219.1/login/forgot_password.php");
     }
 
     $scope.login = function() {
