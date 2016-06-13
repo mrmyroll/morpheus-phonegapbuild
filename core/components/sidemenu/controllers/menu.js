@@ -34,6 +34,31 @@ angular.module('mm.core.sidemenu')
         });
     };
 
+    /*$scope.keluar = function(e, index) {
+        // Prevent login() from being triggered. No idea why I cannot replicate this
+        // problem on http://codepen.io/ionic/pen/JsHjf.
+        e.stopPropagation();
+
+        var site = $scope.sites[index],
+            sitename = site.sitename;
+
+        $mmText.formatText(sitename).then(function(sitename) {
+            $mmUtil.showConfirm($translate('mm.login.confirmdeletesite', {sitename: sitename})).then(function() {
+                $mmSitesManager.deleteSite(site.id).then(function() {
+                    $scope.sites.splice(index, 1);
+                    $mmSitesManager.hasNoSites().then(function() {
+                        // No sites left, go to add a new site state.
+                        $ionicHistory.nextViewOptions({disableBack: true});
+                        $mmLoginHelper.goToAddSite();
+                    });
+                }, function() {
+                    $log.error('Delete site failed');
+                    $mmUtil.showErrorModal('mm.login.errordeletesite', true);
+                });
+            });
+        });
+    };*/
+
     $mmSite.getDocsUrl().then(function(docsurl) {
         $scope.docsurl = docsurl;
     });
